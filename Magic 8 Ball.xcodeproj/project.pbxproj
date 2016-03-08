@@ -14,6 +14,7 @@
 		2AC8702C1C8E497B00EA71ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC8702A1C8E497B00EA71ED /* LaunchScreen.storyboard */; };
 		2AC870371C8E497B00EA71ED /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC870361C8E497B00EA71ED /* Magic_8_BallTests.swift */; };
 		2AC870421C8E497B00EA71ED /* Magic_8_BallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC870411C8E497B00EA71ED /* Magic_8_BallUITests.swift */; };
+		2AC870501C8E4E4500EA71ED /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2AC8703D1C8E497B00EA71ED /* Magic 8 BallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic 8 BallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC870411C8E497B00EA71ED /* Magic_8_BallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallUITests.swift; sourceTree = "<group>"; };
 		2AC870431C8E497B00EA71ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2AC870281C8E497B00EA71ED /* Assets.xcassets */,
 				2AC8702A1C8E497B00EA71ED /* LaunchScreen.storyboard */,
 				2AC8702D1C8E497B00EA71ED /* Info.plist */,
+				2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */,
 			);
 			path = "Magic 8 Ball";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				2AC870241C8E497B00EA71ED /* ViewController.swift in Sources */,
 				2AC870221C8E497B00EA71ED /* AppDelegate.swift in Sources */,
+				2AC870501C8E4E4500EA71ED /* EightBallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
