@@ -20,6 +20,23 @@ class ViewController: UIViewController {
         print(String(format: "%.2f", age))
         print(name)
         
+        let bm = EightballModel (extraResponseArray: ["Hello World"])
+        
+        print("Will I get full marks for this lab")
+        generateResponse(bm)
+        
+        print("Will the cronull sharks receive a premiership this year")
+        generateResponse(bm)
+
+        print("Will I end up becoming a cat person when i get old")
+        generateResponse(bm)
+
+        print(bm)
+        
+        debugPrint(bm)
+        
+        
+        
         
         
     }
@@ -29,7 +46,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func generateResponse(mb: EightballModel) {
+        let randomindex = Int(arc4random_uniform(UInt32(mb.responseArray.count)))
+        print(mb.responseArray[randomindex])
+    }
 
 }
 

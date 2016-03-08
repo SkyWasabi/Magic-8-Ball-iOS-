@@ -8,36 +8,59 @@
 
 import Foundation
 
-class EightballModel {
+class EightballModel : CustomStringConvertible, CustomDebugStringConvertible {
     var responseArray : Array<String> = []
-    let initialResponseArray = "Ask again later"
-    let extraResponseArray : Array<String> = [  "It is certain",
-                                                "It is decidedly so",
-                                                "Without a doubt",
-                                                "Yes, definitely",
-                                                "You may rely on it",
-                                                "As I see it, yes",
-                                                "Most likely",
-                                                "Outlook good",
-                                                "Yes",
-                                                "Signs point to yes",
-                                                "Reply hazy try again",
-                                                "Better not tell you now",
-                                                "Cannot predict now",
-                                                "Concentrate and ask again",
-                                                "Don't count on it",
-                                                "My reply is no",
-                                                "My sources say no",
-                                                "Outlook not so good",
-                                                "Very doubtful" ]
+    let initialResponseArray = [  "It is certain",
+                                    "Ask again later",
+                                    "It is decidedly so",
+                                    "Without a doubt",
+                                    "Yes, definitely",
+                                    "You may rely on it",
+                                    "As I see it, yes",
+                                    "Most likely",
+                                    "Outlook good",
+                                    "Yes",
+                                    "Signs point to yes",
+                                    "Reply hazy try again",
+                                    "Better not tell you now",
+                                    "Cannot predict now",
+                                    "Concentrate and ask again",
+                                    "Don't count on it",
+                                    "My reply is no",
+                                    "My sources say no",
+                                    "Outlook not so good",
+                                    "Very doubtful" ]
     
     init() {
-        responseArray[0] = initialResponseArray
+        responseArray = initialResponseArray
     }
     
     init(extraResponseArray : Array<String>) {
-        for index in 1...19 {
-            responseArray[index] = extraResponseArray[index - 1]
+        responseArray = initialResponseArray + extraResponseArray
+    }
+    
+    var sizeOfArray : Int {
+        get {
+            return responseArray.count
+        }
+    }
+    
+    var description: String {
+        get {
+            var output = "The list of responses is: ";
+            
+            for response in responseArray
+            {
+                output += response + ", "
+            }
+            
+            return output;
+        }
+    }
+    
+    var debugDescription: String {
+        get {
+            return "hello";
         }
     }
 }
