@@ -60,6 +60,13 @@ class EightballModel : CustomStringConvertible, CustomDebugStringConvertible {
     
     var debugDescription: String {
         get {
+            var output = "Debug reponses:";
+            
+            for response in responseArray
+            {
+                output += "Debug" + response + "\n"
+            }
+            
             return "hello";
         }
     }
