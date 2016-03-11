@@ -67,7 +67,7 @@ class EightballModel : CustomStringConvertible, CustomDebugStringConvertible {
                 output += "Debug" + response + "\n"
             }
             
-            return "hello";
+            return output;
         }
     }
 }

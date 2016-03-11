@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         print(String(format: "%.2f", age))
         print(name)
         
-        let bm = EightballModel (extraResponseArray: ["Hello World"])
+        let bm = EightballModel (extraResponseArray: ["Hello World", "😈"])
         
         print("Will I get full marks for this lab")
         generateResponse(bm)
