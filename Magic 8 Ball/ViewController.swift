@@ -9,10 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //MARK: Properties
+    @IBOutlet weak var text: UITextField!
+    @IBOutlet weak var imgball: UIImageView!
+    @IBOutlet weak var imgbackground: UIImageView!
+    @IBOutlet weak var labeltext: UILabel!
+    @IBOutlet weak var shakebutton: UIButton!
+    
+    let bm = EightballModel (extraResponseArray: ["Hello World", "😈"])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         
         let age : Double = 21
         let name = "Tan Shou Heng"
@@ -20,7 +30,7 @@ class ViewController: UIViewController {
         print(String(format: "%.2f", age))
         print(name)
         
-        let bm = EightballModel (extraResponseArray: ["Hello World", "😈"])
+        
         
         print("Will I get full marks for this lab")
         generateResponse(bm)
@@ -41,6 +51,16 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func shakebuttonclick(sender: AnyObject) {
+        let randomindex = Int(arc4random_uniform(UInt32(bm.responseArray.count)))
+        self.labeltext.text = bm.responseArray[randomindex]
+        
+    }
+    
+    @IBAction func textfieldfunction(sender: AnyObject) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
