@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
     
     //MARK: Properties
     @IBOutlet weak var text: UITextField!
@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        text.delegate = self;
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -50,16 +53,34 @@ class ViewController: UIViewController {
         
         
     }
+    
+
 
     @IBAction func shakebuttonclick(sender: AnyObject) {
-        let randomindex = Int(arc4random_uniform(UInt32(bm.responseArray.count)))
-        self.labeltext.text = bm.responseArray[randomindex]
+        if text.text == "" {
+            
+        }
+        
+        else {
+            generateResponse(bm)
+        }
+        
         
     }
     
-    @IBAction func textfieldfunction(sender: AnyObject) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if text.text == "" {
+            
+        }
         
+        else {
+            generateResponse(bm)
+        }
+        
+        text.resignFirstResponder()
+        return true;
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -68,6 +89,13 @@ class ViewController: UIViewController {
     
     func generateResponse(mb: EightballModel) {
         let randomindex = Int(arc4random_uniform(UInt32(mb.responseArray.count)))
+        let randomcircleindex = Int(arc4random_uniform(UInt32(6))) + 1
+        let imagename = "circle" + String(randomcircleindex)
+        
+        imgball.image = UIImage(named: imagename)
+        
+        self.labeltext.alpha = 1
+        self.labeltext.text = bm.responseArray[randomindex]
         print(mb.responseArray[randomindex])
     }
 
