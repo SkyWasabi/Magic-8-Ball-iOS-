@@ -87,6 +87,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    //Function
     func generateResponse(mb: EightballModel) {
         let randomindex = Int(arc4random_uniform(UInt32(mb.responseArray.count)))
         let randomcircleindex = Int(arc4random_uniform(UInt32(6))) + 1
