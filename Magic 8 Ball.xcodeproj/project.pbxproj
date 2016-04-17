@@ -15,6 +15,8 @@
 		2AC870371C8E497B00EA71ED /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC870361C8E497B00EA71ED /* Magic_8_BallTests.swift */; };
 		2AC870421C8E497B00EA71ED /* Magic_8_BallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC870411C8E497B00EA71ED /* Magic_8_BallUITests.swift */; };
 		2AC870501C8E4E4500EA71ED /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */; };
+		CB9A137F1CC3BE290014FD47 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A137E1CC3BE290014FD47 /* HistoryViewController.swift */; };
+		CBD43FC31CBD07AD00D1AF1E /* QuestionResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43FC21CBD07AD00D1AF1E /* QuestionResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2AC870411C8E497B00EA71ED /* Magic_8_BallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallUITests.swift; sourceTree = "<group>"; };
 		2AC870431C8E497B00EA71ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
+		CB9A137E1CC3BE290014FD47 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CBD43FC21CBD07AD00D1AF1E /* QuestionResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				2AC8702A1C8E497B00EA71ED /* LaunchScreen.storyboard */,
 				2AC8702D1C8E497B00EA71ED /* Info.plist */,
 				2AC8704F1C8E4E4500EA71ED /* EightBallModel.swift */,
+				CBD43FC21CBD07AD00D1AF1E /* QuestionResponseModel.swift */,
+				CB9A137E1CC3BE290014FD47 /* HistoryViewController.swift */,
 			);
 			path = "Magic 8 Ball";
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			files = (
 				2AC870241C8E497B00EA71ED /* ViewController.swift in Sources */,
 				2AC870221C8E497B00EA71ED /* AppDelegate.swift in Sources */,
+				CBD43FC31CBD07AD00D1AF1E /* QuestionResponseModel.swift in Sources */,
+				CB9A137F1CC3BE290014FD47 /* HistoryViewController.swift in Sources */,
 				2AC870501C8E4E4500EA71ED /* EightBallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

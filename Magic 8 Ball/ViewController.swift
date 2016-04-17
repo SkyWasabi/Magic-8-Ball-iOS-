@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
     @IBOutlet weak var text: UITextField!
@@ -18,6 +18,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var shakebutton: UIButton!
     
     let bm = EightballModel (extraResponseArray: ["Hello World", "😈"])
+    let questionresponse = QuestionResponseModel()
+    var questionarray:NSMutableArray = NSMutableArray()
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +68,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
         
         else {
+            questionresponse.settheQuestion(text.text!)
             generateResponse(bm)
+            questionarray.addObject(questionresponse)
+            savearray()
+            
         }
         
         
@@ -75,7 +84,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
         
         else {
+            questionresponse.settheQuestion(text.text!)
             generateResponse(bm)
+            questionarray.addObject(questionresponse)
+            savearray()
         }
         
         text.resignFirstResponder()
@@ -98,7 +110,22 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         self.labeltext.alpha = 1
         self.labeltext.text = bm.responseArray[randomindex]
-        print(mb.responseArray[randomindex])
+        questionresponse.settheAnswer(self.labeltext.text!)
+        questionresponse.display()
+        
+    }
+    
+    func createArchivingPath() {
+        
+        
+    }
+    
+    func savearray() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(questionarray, toFile: QuestionResponseModel.ArchiveURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Failed to save")
+        }
     }
 
     
